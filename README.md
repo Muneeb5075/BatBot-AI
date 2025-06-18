@@ -1,12 +1,17 @@
-# React + Vite
+# BatBot – Your Smart AI Companion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+BatBot is an intelligent AI assistant designed to help you with everything from answering questions to generating creative content. Whether you're looking for quick information, writing support, coding help, or just a friendly conversation, BatBot is always ready to chat.
 
-Currently, two official plugins are available:
+💡 Key Features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Natural conversations in English and Urdu
 
-## Expanding the ESLint configuration
+Instant answers to all your questions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Helps with writing, summaries, and translations
+
+Coding support and logical problem-solving
+
+Always available — 24/7 smart assistance
+
+Powered by advanced AI technology, BatBot understands your needs and delivers clear, helpful, and human-like responses. Start chatting today and explore the future of intelligent conversations!

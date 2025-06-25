@@ -1,62 +1,99 @@
-.sidebar{
-    min-height: 100vh;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color:#f0f4f9;  ;
-    padding: 25px 15px;
-}
-.sidebar img{
-    width: 20px;
-}
-.sidebar .menu{
-    display: block;
-    margin-left: 10px;
-    cursor: pointer;
-}
-.sidebar .new-chat{
-    margin-top: 50px;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 15px;
-    background-color: #e6eaf1;
-    border-radius: 50px;
-    font-size: 14px;
-    color: gray;
-    cursor: pointer;
+.sidebar {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f0f4f9;
+  padding: 25px 15px;
+  width: 90px; /* Collapsed width */
+  transition: width 0.3s ease; /* Smooth transition for width */
+  overflow: hidden; /* Hide overflowing content during animation */
+  position: relative;
 }
 
-.sidebar .recent{
-    display: flex;
-    flex-direction: column;
+.sidebar.extended {
+  width: 220px; /* Expanded width */
 }
 
-.sidebar .recent-title{
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-.sidebar .recent-entry{
-    display: flex;
-    align-items: start;
-    gap: 10px;
-    padding: 10px;
-    padding-right: 40px;
-    border-radius: 50px;
-    color: #282828;
-    cursor: pointer;
+.sidebar img {
+  width: 20px;
 }
 
-.sidebar .recent-entry:hover{
-    background-color: #e2e6eb;
+.sidebar .menu {
+  display: block;
+  margin-left: 15px;
+  cursor: pointer;
 }
 
-.sidebar .bottom{
-    display: flex;
-    flex-direction: column;
+.sidebar .new-chat {
+  margin-top: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background-color: #e6eaf1;
+  border-radius: 50px;
+  font-size: 14px;
+  color: gray;
+  cursor: pointer;
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
-.sidebar .bottom-item{
-    padding-right: 10px;
-    cursor: pointer;
+.sidebar .recent {
+  display: flex;
+  flex-direction: column;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease; /* Fade in/out for recent section */
+}
+
+.sidebar.extended .recent {
+  opacity: 1; /* Visible when extended */
+}
+
+.sidebar .recent-title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+.sidebar .recent-entry {
+  display: flex;
+  align-items: center; /* Changed to center for better alignment */
+  gap: 10px;
+  padding: 10px;
+  padding-right: 40px;
+  border-radius: 50px;
+  color: #282828;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.sidebar .recent-entry:hover {
+  background-color: #e2e6eb;
+}
+
+.sidebar .bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .bottom-item {
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.sidebar .bottom-item p {
+  white-space: nowrap;
+}
+
+/* Ensure text is hidden when sidebar is collapsed */
+.sidebar p {
+  opacity: 0; 
+  visibility: hidden; /* Better for preventing layout shifts */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sidebar.extended p {
+  opacity: 1;
+  visibility: visible; 
 }

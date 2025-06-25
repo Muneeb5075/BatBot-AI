@@ -30,6 +30,8 @@
     color: #c4c7c5;
     font-weight: 500;
     padding: 20px;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .main .greet span {

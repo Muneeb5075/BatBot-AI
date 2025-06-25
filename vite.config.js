@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/BatBot-AI/', // <- your repo name
+  base: '/', // <- your repo name
   plugins: [react()],
 })
